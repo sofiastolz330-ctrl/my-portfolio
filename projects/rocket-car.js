@@ -8,9 +8,9 @@ var ahead = 1;
 var big = 1;
 var grn = 50;
 function setup() {
-  let canvas = createCanvas(500, 500);
+  let canvas = createCanvas(500, 500); // put let canvas and not just canvas
   canvas.parent('sketch-container');
-  rndX = random(100, 300);
+  rndX = random(100, 300); //had to put rndX and not just x
   rndY = random(100, 300);
 }
 function draw() {
