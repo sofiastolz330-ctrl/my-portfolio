@@ -52,12 +52,12 @@ function drawCar() {
 function moveCar() {
   X += Cmove;
 
- ```javascript
+ 
   // Bounce off right edge
   if (X > width - 100) {
     Cmove = -2; //changed the numbers and formating
   }
-```
+
   // Bounce off left edge
   if (X < 100) {
     Cmove = 2; //changed it from +20 to just 2
