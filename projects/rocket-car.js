@@ -1,79 +1,65 @@
+// Car animation with star background (p5.js)
 
-var X = 100
-let centerY = 200
+let X = 100;
+let centerY = 200;
 let size = 150;
-var Cmove = 2;
+let Cmove = 2;
+
+// Star positions (cleaner than repeating code)
+let stars = [
+  [10,100],[50,100],[136,100],[356,100],[280,100],
+  [40,150],[99,150],[230,150],[354,150],[289,150],
+  [29,50],[157,50],[127,50],[253,50],[333,50],
+  [253,200],[23,200],[105,200],[222,200],
+  [270,250],[70,250],[160,250],[370,250],
+  [300,300],[40,300],[137,300],[200,300],
+  [27,350],[134,350],[397,350],[306,350]
+];
 
 function setup() {
   createCanvas(400, 400);
 }
 
-
 function draw() {
-  background(0,0,139);
-  
-  //stars
-  circle (10,100,5)
-  circle (50,100,5)
-  circle (136,100,5)
-  circle (356,100,5)
-  circle (280,100,5)
-  circle (40,150,5)
-  circle (99,150,5)
-  circle (230,150,5)
-  circle (354,150,5)
-  circle (289,150,5)
-  circle (29,50,5)
-  circle (157,50,5)
-  circle (127,50,5)
-  circle (253,50,5)
-  circle (333,50,5)
-  circle (253,200,5)
-  circle (23,200,5)
-  circle (105,200,5)
-  circle (222,200,5)
-  circle (270,250,5)
-  circle (70,250,5)
-  circle (160,250,5)
-  circle (370,250,5)
-  circle (300,300,5)
-  circle (40,300,5)
-  circle (137,300,5)
-  circle (200,300,5)
-  circle (27,350,5)
-  circle (134,350,5)
-  circle (397,350,5)
-  circle (306,350,5)
-  
-  if (X <= 50 || X >= width - 100) {
-    
-  }
-  if (centerY <= 50 || centerY >= height - 100) {
-    
-  }
+  background(0, 0, 139);
 
-  
+  drawStars();
+  drawCar();
+  moveCar();
+}
 
+// Draw all stars
+function drawStars() {
+  fill(255);
+  noStroke();
   
-  
- //the car
+  for (let i = 0; i < stars.length; i++) {
+    circle(stars[i][0], stars[i][1], 5);
+  }
+}
+
+// Draw the car
+function drawCar() {
   fill("black");
-  rect(X - 100, centerY-100, 200, 80, 25);
-  fill("white")
-  ellipse(X + (size * 0.35), centerY - (size * 0.10), size * 0.5, size * 0.5);
-  ellipse(X - (size * 0.220), centerY - (size / 10), size * 0.5, size * 0.5);
-  X= X + Cmove
-  if (X> width-20) {
-    Cmove=-1;
-    
+  rect(X - 100, centerY - 100, 200, 80, 25);
+
+  fill("white");
+  ellipse(X + size * 0.35, centerY - size * 0.10, size * 0.5);
+  ellipse(X - size * 0.22, centerY - size / 10, size * 0.5);
+}
+
+// Handle movement and bouncing
+function moveCar() {
+  X += Cmove;
+
+ ```javascript
+  // Bounce off right edge
+  if (X > width - 100) {
+    Cmove = -2; //changed the numbers and formating
   }
- // if (X > width - 10) {
- //   Cmove = 2;
- // }
-  if(X < 20) {
-    Cmove = +20
+```
+  // Bounce off left edge
+  if (X < 100) {
+    Cmove = 2; //changed it from +20 to just 2
   }
- 
-//stars
-  
 }
