@@ -31,7 +31,7 @@ function displayInfo() {
   fill(0);
   textSize(14);
   textAlign(LEFT);
-  text("Press keys 1–6 to toggle lights", 10, 20);
+  text("Press keys 1 through 6 to toggle lights", 10, 20);
   text("Moves: " + moves + " / " + maxMoves, 10, 40);
 
   fill(0);

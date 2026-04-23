@@ -3,23 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lights</title>
+  <title>Rocket Car</title>
   <link rel="stylesheet" href="../style.css">
+  <style>
+    #sketch-container canvas {
+      display: block;
+      border-radius: 6px;
+    }
+  </style>
 </head>
 <body>
   <main class="container">
     <header class="project-header">
       <a href="../index.html" class="back-btn">← Back</a>
-      <h1>Project One</h1>
+      <h1>Lights</h1>
     </header>
-    <div class="demo-area" id="demo">
-      <p class="placeholder">Click "Run project" to see the output.</p>
+    <div class="demo-area" style="padding: 1rem;">
+      <div id="sketch-container"></div>
     </div>
-    <button class="run-btn" id="runBtn">
-      ▶ Run project
-    </button>
-    <div id="output"></div>
+    <p style="margin-top: 1rem; font-size: 13px; color: var(--muted);">
+      Try and solve the puzzle using keys 1 through 6.
+    </p>
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
   <script src="lights.js"></script>
 </body>
 </html>
