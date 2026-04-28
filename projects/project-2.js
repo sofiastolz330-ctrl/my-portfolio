@@ -24,7 +24,8 @@ function preload () {
 
 
 function setup() {
-	createCanvas(800, 600);
+	let canvas = createCanvas(400, 400); // put let canvas and not just canvas
+  canvas.parent('sketch-container');
    textAlign(CENTER, CENTER);
 
 	//Sets up the bee's 'settings'
