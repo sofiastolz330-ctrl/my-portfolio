@@ -14,7 +14,7 @@ let scene = "start";
 
 function preload () {
 	//loads the images and sound that I will be using
-	beeImg = loadImage("bee.png");
+	beeImg = loadImage("Bee-removebg-preview.png");
 	//https://stock.adobe.com/search?k=bumblebee+cartoon
    flowerImg = loadImage("flower4.png");
 	//https://www.dreamstime.com/cute-cartoon-flower-collection-collection-twelve-cute-cartoon-flower-illustrations-including-daisies-tulips-daffodils-image388586984
