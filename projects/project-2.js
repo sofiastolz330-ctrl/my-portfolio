@@ -4,6 +4,8 @@ let flowerImg;
 let buzzSound;
 let bee;
 let flowers = [];
+let width = 400;
+let height = 400;
 
 //This helps set up the baselines for the game score keeping
 let pollen = 0;
